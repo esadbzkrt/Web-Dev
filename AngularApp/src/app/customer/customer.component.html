@@ -1,0 +1,9 @@
+<ul>
+	<li *ngFor="let customer of customers" (click)="selectCustomer(customer)" >
+		{{ customer.firstName }} {{ customer.lastName }}
+	</li>
+</ul>
+
+<strong *ngIf=selectCustomer else elseBlock>{{selectedCustomer.firstName}} Seçtiniz
+
+	<ng-template #elseBlock> Bir şey seçmediniz! </ng-template>
